@@ -285,6 +285,7 @@ export const queryparamToQuery = async (
           switch (indexes[key].type) {
             case 'string':
             case 'integer':
+            case 'float':
             case 'path':
             case 'uuid':
             case 'boolean':
