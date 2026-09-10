@@ -230,6 +230,7 @@
 - Fix job runner import @robgietema
 - Fix transaction bug in jobs @robgietema
 - Fix navroot structure @robgietema
+- Fix mail debug print link issue @robgietema
 
 ### Internal
 
