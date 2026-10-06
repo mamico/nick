@@ -139,6 +139,8 @@
 - Add inline download to all file endpoints @robgietema
 - Add custom variable support in config @robgietema
 - Add support for float indexes @robgietema
+- Read auth token from either the header or from a cookie @robgietema
+- Make the search batch size limit configurable via requestLimit.batch @robgietema
 - Add support for multipart/form-data in content POST and PATCH requests @mamico
 
 ### Bugfix

@@ -29,6 +29,26 @@ export function hasPermission(
 }
 
 /**
+ * Extract the auth token from a request either the Authorization header
+ * or the auth_token cookie.
+ * @method getTokenFromRequest
+ * @param {Object} headers Request headers.
+ * @returns {string} Auth token.
+ */
+export function getTokenFromRequest(headers: {
+  authorization?: string;
+  cookie?: string;
+}): string | undefined {
+  const authMatch = headers.authorization?.match(/^Bearer (.*)$/);
+  if (authMatch) {
+    return authMatch[1];
+  }
+
+  const cookieMatch = headers.cookie?.match(/(?:^|;\s*)auth_token=([^;]*)/);
+  return cookieMatch ? decodeURIComponent(cookieMatch[1]) : undefined;
+}
+
+/**
  * Get user based on token.
  * @method getUserId
  * @param {Object} req Request object.
