@@ -390,6 +390,7 @@ export type ConfigSettings = {
     files: string;
     api: string;
     chunk: string;
+    batch: number;
   };
   userschema: (req: Request) => Schema;
   [key: string]: unknown;

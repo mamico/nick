@@ -115,6 +115,7 @@ class Config {
         api: '1mb',
         files: '10mb',
         chunk: '1mb',
+        batch: 1000,
       },
       push: {
         enabled: config.push?.enabled || false,
