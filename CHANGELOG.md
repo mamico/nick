@@ -139,6 +139,7 @@
 - Add inline download to all file endpoints @robgietema
 - Add custom variable support in config @robgietema
 - Add support for float indexes @robgietema
+- Add support for multipart/form-data in content POST and PATCH requests @mamico
 
 ### Bugfix
 
